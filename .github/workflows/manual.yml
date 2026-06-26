@@ -20,7 +20,7 @@ on:
 
 jobs:
   greet:
-    runs-on: self-hosted
+    runs-on: windows-latest
     steps:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
