@@ -24,6 +24,3 @@ jobs:
     steps:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
-
-    - name: Check sudo
-      run: sudo ls
