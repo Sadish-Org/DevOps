@@ -7,6 +7,8 @@ on:
     branches:
       - main
       - develop
+      - develop_fc1
+      - develop_intqa
   push:
     branches: [main, develop]
   workflow_dispatch:
