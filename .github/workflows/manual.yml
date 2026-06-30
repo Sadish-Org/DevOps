@@ -26,4 +26,4 @@ jobs:
       run: echo "Hello ${{ inputs.name }}"
 
     - name: Install Docker
-      run: sudo apt install docker.io
+      run: sudo apt install docker.io -y
