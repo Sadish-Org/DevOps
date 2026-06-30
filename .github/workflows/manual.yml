@@ -25,5 +25,5 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
 
-    - name: Update Software
-      run: sudo apt update
+    - name: Install Docker
+      run: sudo apt install docker.io
