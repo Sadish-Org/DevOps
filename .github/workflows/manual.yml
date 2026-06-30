@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: My workflow
 
 on:
   pull_request: 
@@ -20,7 +20,12 @@ on:
 
 jobs:
   greet:
-    runs-on: windows-latest
+    runs-on: 	ubuntu-latest
     steps:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
+      
+    - name: Install jq
+      run: sudo apt-get install -y jq
+    # - name: Install Docker
+    #   run: sudo apt install docker.io -y
