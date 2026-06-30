@@ -7,6 +7,8 @@ on:
     branches:
       - main
       - develop
+      - develop_fc1
+      - develop_intqa
   push:
     branches: [main, develop]
   workflow_dispatch:
@@ -20,7 +22,10 @@ on:
 
 jobs:
   greet:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
+
+    - name: Install jq
+      run: sudo apt-get install -y jq
