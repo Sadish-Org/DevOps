@@ -20,7 +20,10 @@ on:
 
 jobs:
   greet:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
+
+    - name: Install jq
+      run: sudo apt-get install -y jq
